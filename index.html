@@ -61,7 +61,11 @@
       z-index: 0;
       pointer-events: none;
       
-      /* Magic trick: Invert hitam jadi putih, putih jadi hitam, lalu blend-mode screen (hilangkan background hitam) */
+      /* GPU Hardware Acceleration to prevent scroll lag from filters */
+      will-change: transform, opacity;
+      transform: translateZ(0);
+      
+      /* Magic trick: Invert hitam jadi putih, putih jadi hitam, lalu blend-mode screen */
       filter: invert(1) sepia(1) hue-rotate(5deg) saturate(2) opacity(0.25);
       mix-blend-mode: screen;
       
@@ -478,7 +482,7 @@
   <section id="cover"
     class="fixed inset-0 z-50 flex flex-col items-center justify-between overflow-hidden px-6 py-10 text-center">
     <div class="kb-frame kb-slow absolute inset-0">
-      <img src="DSC00474.jpeg" class="object-cover w-full h-full" alt="Cover Image">
+      <img loading="lazy" src="DSC00474.jpeg" class="object-cover w-full h-full" alt="Cover Image">
     </div>
     <div class="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/45 to-charcoal/85"></div>
     <div class="absolute inset-0" style="box-shadow: inset 0 0 180px 60px rgba(0,0,0,.55);"></div>
@@ -605,7 +609,7 @@
         <div class="reveal-left flex flex-col items-center text-center">
           <div
             class="tilt-card kb-frame frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card">
-            <img src="DSC00489.jpeg" class="object-cover w-full h-full" alt="Nabilah Jauza Rizqi">
+            <img loading="lazy" src="DSC00489.jpeg" class="object-cover w-full h-full" alt="Nabilah Jauza Rizqi">
           </div>
           <p class="font-script italic text-2xl text-gold mb-1">The Bride</p>
           <h3 class="font-serif text-2xl md:text-3xl text-ink mb-3">Nabilah Jauza Rizqi, S.Farm.</h3>
@@ -617,7 +621,7 @@
         <div class="reveal-right flex flex-col items-center text-center">
           <div
             class="tilt-card kb-frame kb-alt frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card">
-            <img src="DSC00506.jpeg" class="object-cover w-full h-full" alt="Irfan Akhmad Rizal">
+            <img loading="lazy" src="DSC00506.jpeg" class="object-cover w-full h-full" alt="Irfan Akhmad Rizal">
           </div>
           <p class="font-script italic text-2xl text-gold mb-1">The Groom</p>
           <h3 class="font-serif text-2xl md:text-3xl text-ink mb-3">Irfan Akhmad Rizal, S.Pd</h3>
@@ -676,52 +680,52 @@
       <div class="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-4 md:gap-8 mt-12 px-4 pb-10">
         <div class="reveal relative w-36 md:w-52 -rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-4">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00474.jpeg" class="w-full h-auto rounded" alt="Galeri 1">
+            <img loading="lazy" src="DSC00474.jpeg" class="w-full h-auto rounded" alt="Galeri 1">
           </div>
         </div>
         <div class="reveal relative w-40 md:w-60 rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer -mt-6">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00478.jpeg" class="w-full h-auto rounded" alt="Galeri 2">
+            <img loading="lazy" src="DSC00478.jpeg" class="w-full h-auto rounded" alt="Galeri 2">
           </div>
         </div>
         <div class="reveal relative w-36 md:w-52 -rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-8">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00489.jpeg" class="w-full h-auto rounded" alt="Galeri 3">
+            <img loading="lazy" src="DSC00489.jpeg" class="w-full h-auto rounded" alt="Galeri 3">
           </div>
         </div>
         <div class="reveal relative w-44 md:w-64 rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer -mt-4">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00506.jpeg" class="w-full h-auto rounded" alt="Galeri 4">
+            <img loading="lazy" src="DSC00506.jpeg" class="w-full h-auto rounded" alt="Galeri 4">
           </div>
         </div>
         <div class="reveal relative w-32 md:w-48 -rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-6">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00547.jpeg" class="w-full h-auto rounded" alt="Galeri 5">
+            <img loading="lazy" src="DSC00547.jpeg" class="w-full h-auto rounded" alt="Galeri 5">
           </div>
         </div>
         <div class="reveal relative w-40 md:w-56 rotate-1 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer -mt-2">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00571.jpeg" class="w-full h-auto rounded" alt="Galeri 6">
+            <img loading="lazy" src="DSC00571.jpeg" class="w-full h-auto rounded" alt="Galeri 6">
           </div>
         </div>
         <div class="reveal relative w-36 md:w-52 -rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-8">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00588.jpeg" class="w-full h-auto rounded" alt="Galeri 7">
+            <img loading="lazy" src="DSC00588.jpeg" class="w-full h-auto rounded" alt="Galeri 7">
           </div>
         </div>
         <div class="reveal relative w-44 md:w-60 rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer -mt-8">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00592.jpeg" class="w-full h-auto rounded" alt="Galeri 8">
+            <img loading="lazy" src="DSC00592.jpeg" class="w-full h-auto rounded" alt="Galeri 8">
           </div>
         </div>
         <div class="reveal relative w-36 md:w-52 -rotate-1 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-2">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00597.jpeg" class="w-full h-auto rounded" alt="Galeri 9">
+            <img loading="lazy" src="DSC00597.jpeg" class="w-full h-auto rounded" alt="Galeri 9">
           </div>
         </div>
         <div class="reveal relative w-40 md:w-56 rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-6 md:mt-10">
           <div class="glass-card gilded-border p-2 md:p-3 shadow-xl">
-            <img src="DSC00603.jpeg" class="w-full h-auto rounded" alt="Galeri 10">
+            <img loading="lazy" src="DSC00603.jpeg" class="w-full h-auto rounded" alt="Galeri 10">
           </div>
         </div>
       </div>
@@ -995,31 +999,27 @@
     }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
     revealEls.forEach(el => io.observe(el));
 
-    /* ---------- Parallax dengan LERP (smooth, terasa mewah & sinematik) ---------- */
+    /* ---------- Optimized Parallax (No lag) ---------- */
     const parallaxEls = Array.from(document.querySelectorAll('.parallax-layer')).map(el => ({
-      el, speed: parseFloat(el.getAttribute('data-speed')) || 0.3, current: 0, target: 0
+      el, speed: parseFloat(el.getAttribute('data-speed')) || 0.3
     }));
 
-    function computeTargets() {
-      const vh = window.innerHeight;
-      parallaxEls.forEach(p => {
-        const rect = p.el.parentElement.getBoundingClientRect();
-        p.target = (rect.top + rect.height / 2 - vh / 2) * p.speed;
-      });
-    }
-
-    function animateParallax() {
-      parallaxEls.forEach(p => {
-        p.current += (p.target - p.current) * 0.075;
-        p.el.style.transform = `translate3d(0, ${p.current.toFixed(2)}px, 0) scale(1.12)`;
-      });
-      requestAnimationFrame(animateParallax);
-    }
-
-    window.addEventListener('scroll', () => { computeTargets(); setActiveNav(); }, { passive: true });
-    window.addEventListener('resize', computeTargets);
-    computeTargets();
-    animateParallax();
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY;
+          parallaxEls.forEach(p => {
+            p.el.style.transform = `translate3d(0, ${scrolled * p.speed}px, 0) scale(1.15)`;
+          });
+          setActiveNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    // Initial call to set active nav
     setActiveNav();
 
     // GOLD DUST PARTICLES
@@ -1065,13 +1065,13 @@
     }
 
     function animateParticles() {
-      requestAnimationFrame(animateParticles);
-      ctx.clearRect(0, 0, innerWidth, innerHeight);
-      for (let i = 0; i < particlesArray.length; i++) { particlesArray[i].update(); }
+      // DISABLED TO PREVENT SCROLL LAG: requestAnimationFrame(animateParticles);
+      // ctx.clearRect(0, 0, innerWidth, innerHeight);
+      // for (let i = 0; i < particlesArray.length; i++) { particlesArray[i].update(); }
     }
 
-    initParticles(); animateParticles();
-    window.addEventListener('resize', () => { canvas.width = innerWidth; canvas.height = innerHeight; initParticles(); });
+    // initParticles(); animateParticles();
+    // window.addEventListener('resize', () => { canvas.width = innerWidth; canvas.height = innerHeight; initParticles(); });
   </script>
 </body>
 
