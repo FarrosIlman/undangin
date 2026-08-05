@@ -975,7 +975,12 @@
         const params = new URLSearchParams(window.location.search);
         const to = params.get('to');
         if (to) {
-          const guestName = decodeURIComponent(to.replace(/\+/g, ' '));
+          let guestName = "Tamu Undangan";
+          try {
+            guestName = decodeURIComponent(escape(atob(to)));
+          } catch (e) {
+            console.warn("Invalid guest token");
+          }
           document.getElementById('guestName').textContent = guestName;
           const rsvpInput = document.getElementById('rsvpName');
           if (rsvpInput) rsvpInput.value = guestName;

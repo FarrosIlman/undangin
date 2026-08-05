@@ -52,7 +52,8 @@
       guestList.forEach(name => {
         name = name.trim();
         if(name) {
-          const encodedName = encodeURIComponent(name).replace(/%20/g, '+');
+          // Encrypt nama menggunakan Base64 (mendukung karakter khusus)
+          const encodedName = btoa(unescape(encodeURIComponent(name)));
           const finalLink = `${domain}?to=${encodedName}`;
           results.push(`${name}\n${finalLink}\n`);
         }
