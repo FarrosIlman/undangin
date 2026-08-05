@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -815,25 +815,37 @@
           </div>
           <div class="relative custom-select">
             <label class="block text-xs tracking-widest text-gold font-bold mb-2">JUMLAH TAMU</label>
-            <div class="select-selected w-full bg-transparent border-b border-gold/30 py-2 text-ink flex justify-between items-center cursor-pointer hover:border-gold transition-colors">
+            <div
+              class="select-selected w-full bg-transparent border-b border-gold/30 py-2 text-ink flex justify-between items-center cursor-pointer hover:border-gold transition-colors">
               <span class="selected-text text-ink">1 Orang</span>
               <i class="fa-solid fa-chevron-down text-gold text-xs transition-transform duration-300"></i>
             </div>
-            <div class="select-items absolute left-0 right-0 top-full mt-2 bg-[#1a1d1a] border border-gold/30 rounded-lg shadow-xl overflow-hidden z-50 opacity-0 invisible transform -translate-y-2 transition-all duration-300">
-              <div data-value="1" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">1 Orang</div>
-              <div data-value="2" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">2 Orang</div>
+            <div
+              class="select-items absolute left-0 right-0 top-full mt-2 bg-[#1a1d1a] border border-gold/30 rounded-lg shadow-xl overflow-hidden z-50 opacity-0 invisible transform -translate-y-2 transition-all duration-300">
+              <div data-value="1"
+                class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">
+                1 Orang</div>
+              <div data-value="2"
+                class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">
+                2 Orang</div>
             </div>
             <input type="hidden" id="rsvpCount" value="1" required>
           </div>
           <div class="relative custom-select">
             <label class="block text-xs tracking-widest text-gold font-bold mb-2">KONFIRMASI KEHADIRAN</label>
-            <div class="select-selected w-full bg-transparent border-b border-gold/30 py-2 text-ink flex justify-between items-center cursor-pointer hover:border-gold transition-colors">
+            <div
+              class="select-selected w-full bg-transparent border-b border-gold/30 py-2 text-ink flex justify-between items-center cursor-pointer hover:border-gold transition-colors">
               <span class="selected-text text-ink">Insya Allah Hadir</span>
               <i class="fa-solid fa-chevron-down text-gold text-xs transition-transform duration-300"></i>
             </div>
-            <div class="select-items absolute left-0 right-0 top-full mt-2 bg-[#1a1d1a] border border-gold/30 rounded-lg shadow-xl overflow-hidden z-50 opacity-0 invisible transform -translate-y-2 transition-all duration-300">
-              <div data-value="Hadir" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">Insya Allah Hadir</div>
-              <div data-value="Tidak Hadir" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">Maaf, Tidak Bisa Hadir</div>
+            <div
+              class="select-items absolute left-0 right-0 top-full mt-2 bg-[#1a1d1a] border border-gold/30 rounded-lg shadow-xl overflow-hidden z-50 opacity-0 invisible transform -translate-y-2 transition-all duration-300">
+              <div data-value="Hadir"
+                class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">
+                Insya Allah Hadir</div>
+              <div data-value="Tidak Hadir"
+                class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">
+                Maaf, Tidak Bisa Hadir</div>
             </div>
             <input type="hidden" id="rsvpStatus" value="Hadir" required>
           </div>
@@ -909,7 +921,7 @@
       <p class="reveal relative z-10 text-sm text-ink/60 mb-2">Hormat Kami Yang Mengundang,</p>
       <h3 class="reveal relative z-10 font-script italic text-4xl md:text-5xl gold-foil">Nabilah &amp; Rizal</h3>
       <p class="relative z-10 mt-16 text-xs text-ink/40 tracking-widest">MADE WITH <i
-          class="fa-solid fa-heart text-rose"></i> â€” 2026</p>
+          class="fa-solid fa-heart text-rose"></i>2026</p>
       <p class="relative z-10 mt-2 text-[10px] text-ink/40 tracking-widest uppercase">
         Design by <a href="https://instagram.com/malika.joki" target="_blank" rel="noopener noreferrer"
           class="text-gold hover:text-goldlight transition-colors">@malika.joki</a>
@@ -1123,10 +1135,10 @@
             el.classList.add('opacity-0', 'invisible', '-translate-y-2');
             el.classList.remove('opacity-100', 'visible', 'translate-y-0');
             const otherIcon = el.previousElementSibling.querySelector('.fa-chevron-down');
-            if(otherIcon) otherIcon.classList.remove('rotate-180');
+            if (otherIcon) otherIcon.classList.remove('rotate-180');
           }
         });
-        
+
         items.classList.toggle('opacity-0');
         items.classList.toggle('invisible');
         items.classList.toggle('-translate-y-2');
@@ -1140,7 +1152,7 @@
         item.addEventListener('click', () => {
           text.textContent = item.textContent;
           input.value = item.getAttribute('data-value');
-          
+
           items.classList.add('opacity-0', 'invisible', '-translate-y-2');
           items.classList.remove('opacity-100', 'visible', 'translate-y-0');
           icon.classList.remove('rotate-180');
@@ -1153,7 +1165,7 @@
         items.classList.add('opacity-0', 'invisible', '-translate-y-2');
         items.classList.remove('opacity-100', 'visible', 'translate-y-0');
         const icon = items.previousElementSibling.querySelector('.fa-chevron-down');
-        if(icon) icon.classList.remove('rotate-180');
+        if (icon) icon.classList.remove('rotate-180');
       });
     });
 
