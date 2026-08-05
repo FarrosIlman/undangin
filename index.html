@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -564,7 +564,8 @@
     <!-- ===== BERANDA ===== -->
     <section id="beranda"
       class="parallax-wrap relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24">
-      <div class="parallax-layer" data-speed="0.35" style="background-image:url('assets/images/DSC00478.jpeg'); background-position: center 0%;"></div>
+      <div class="parallax-layer" data-speed="0.35"
+        style="background-image:url('assets/images/DSC00478.jpeg'); background-position: center 0%;"></div>
       <div class="absolute inset-0 bg-cream/88"></div>
 
       <div class="relative z-10">
@@ -644,21 +645,17 @@
           <h3 class="font-serif text-2xl md:text-3xl text-ink mb-3">Nabilah Jauza Rizqi, S.Farm.</h3>
           <p class="text-sm text-ink/70 leading-relaxed max-w-xs">Putri Dari<br>Bapak Imron &amp; Ibu Tri Nanda Puji
             Susilowati, S.Pd</p>
-          <div class="flex gap-4 mt-5 text-gold text-lg"><i class="fa-brands fa-instagram"></i></div>
         </div>
 
         <div class="reveal-right flex flex-col items-center text-center">
           <div
             class="tilt-card kb-frame kb-alt frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card overflow-hidden">
-            <img loading="lazy" src="assets/images/foto-mempelai-pria.jpeg" 
-              class="object-cover w-full h-full" 
-              style="transform: scale(1.6); transform-origin: center 20%;"
-              alt="Irfan Akhmad Rizal">
+            <img loading="lazy" src="assets/images/foto-mempelai-pria.jpeg" class="object-cover w-full h-full"
+              style="transform: scale(1.6); transform-origin: center 20%;" alt="Irfan Akhmad Rizal">
           </div>
           <p class="font-script italic text-2xl text-gold mb-1">The Groom</p>
           <h3 class="font-serif text-2xl md:text-3xl text-ink mb-3">Irfan Akhmad Rizal, S.Pd</h3>
           <p class="text-sm text-ink/70 leading-relaxed max-w-xs">Putra Dari<br>Bapak Dhohirin &amp; Ibu Syariyah</p>
-          <div class="flex gap-4 mt-5 text-gold text-lg"><i class="fa-brands fa-instagram"></i></div>
         </div>
       </div>
     </section>
@@ -975,7 +972,7 @@
         const params = new URLSearchParams(window.location.search);
         const to = params.get('to');
         const sig = params.get('sig');
-        
+
         const showError = (title, message) => {
           document.body.innerHTML = `
             <div style="height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1a1d1a;color:#F7F1E6;font-family:sans-serif;text-align:center;padding:20px;">
@@ -991,17 +988,17 @@
           const guestNameRaw = decodeURIComponent(to.replace(/\+/g, ' '));
           const secretKey = "KunciRahasiaUndangan2026";
           let expectedSig = "";
-          
+
           try {
             expectedSig = btoa(unescape(encodeURIComponent(guestNameRaw + secretKey)));
-          } catch (e) {}
+          } catch (e) { }
 
           // Verifikasi keaslian nama menggunakan Signature
           if (sig !== expectedSig) {
             showError("Link Tidak Valid", "Maaf, link undangan Anda telah dimodifikasi secara ilegal.");
             return;
           }
-          
+
           finalName = guestNameRaw;
         }
 
