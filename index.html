@@ -974,6 +974,7 @@
       (function setGuestName() {
         const params = new URLSearchParams(window.location.search);
         const to = params.get('to');
+        const sig = params.get('sig');
         
         const showError = (title, message) => {
           document.body.innerHTML = `
@@ -984,19 +985,28 @@
           `;
         };
 
-        if (!to) {
+        if (!to || !sig) {
           showError("Akses Ditolak", "Maaf, Anda memerlukan link undangan resmi untuk mengakses halaman ini.");
           return;
         }
 
+        const guestNameRaw = decodeURIComponent(to.replace(/\+/g, ' '));
+        const secretKey = "KunciRahasiaUndangan2026";
+        let expectedSig = "";
+        
         try {
-          const guestName = decodeURIComponent(escape(atob(to)));
-          document.getElementById('guestName').textContent = guestName;
-          const rsvpInput = document.getElementById('rsvpName');
-          if (rsvpInput) rsvpInput.value = guestName;
-        } catch (e) {
-          showError("Link Tidak Valid", "Maaf, link undangan Anda tidak valid atau telah dimodifikasi.");
+          expectedSig = btoa(unescape(encodeURIComponent(guestNameRaw + secretKey)));
+        } catch (e) {}
+
+        // Verifikasi keaslian nama menggunakan Signature
+        if (sig !== expectedSig) {
+          showError("Link Tidak Valid", "Maaf, link undangan Anda telah dimodifikasi secara ilegal.");
+          return;
         }
+
+        document.getElementById('guestName').textContent = guestNameRaw;
+        const rsvpInput = document.getElementById('rsvpName');
+        if (rsvpInput) rsvpInput.value = guestNameRaw;
       })();
 
     const cover = document.getElementById('cover');
