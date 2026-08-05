@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -637,7 +637,7 @@
         <div class="reveal-left flex flex-col items-center text-center">
           <div
             class="tilt-card kb-frame frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card">
-            <img loading="lazy" src="assets/images/DSC00489.jpeg" class="object-cover w-full h-full"
+            <img loading="lazy" src="assets/images/foto-mempelai-wanita.jpeg" class="object-cover w-full h-full"
               alt="Nabilah Jauza Rizqi">
           </div>
           <p class="font-script italic text-2xl text-gold mb-1">The Bride</p>
@@ -649,8 +649,10 @@
 
         <div class="reveal-right flex flex-col items-center text-center">
           <div
-            class="tilt-card kb-frame kb-alt frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card">
-            <img loading="lazy" src="assets/images/DSC00506.jpeg" class="object-cover w-full h-full"
+            class="tilt-card kb-frame kb-alt frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card overflow-hidden">
+            <img loading="lazy" src="assets/images/foto-mempelai-pria.jpeg" 
+              class="object-cover w-full h-full" 
+              style="transform: scale(1.6); transform-origin: center 20%;"
               alt="Irfan Akhmad Rizal">
           </div>
           <p class="font-script italic text-2xl text-gold mb-1">The Groom</p>
@@ -1107,13 +1109,13 @@
       const name = document.getElementById('rsvpName').value;
       const count = document.getElementById('rsvpCount').value;
       const status = document.getElementById('rsvpStatus').value;
-      const phone = "6281903411015"; // Ganti nomor ini
+      const phone = "6282329110335"; // Ganti nomor ini
 
-      let message = `Assalamu'alaikum, Halo Nabilah & Rizal,\nSelamat ya atas pernikahannya! 🥳\n\nSaya *${name}* `;
+      let message = `Assalamu'alaikum, Halo Nabilah & Rizal,\nSelamat ya atas pernikahannya! \uD83E\uDD73\n\nSaya *${name}* `;
       if (status === 'Hadir') {
-        message += `insya Allah akan *HADIR* bersama *${count}* orang.\n\nSemoga persiapannya dilancarkan sampai hari H yaa! 🙏`;
+        message += `insya Allah akan *HADIR* bersama *${count}* orang.\n\nSemoga persiapannya dilancarkan sampai hari H yaa! \uD83D\uDE4F`;
       } else {
-        message += `mohon maaf sekali *BELUM BISA HADIR* di hari bahagia kalian.\n\nSemoga acaranya berjalan lancar dan sukses. Selamat berbahagia! 🙏`;
+        message += `mohon maaf sekali *BELUM BISA HADIR* di hari bahagia kalian.\n\nSemoga acaranya berjalan lancar dan sukses. Selamat berbahagia! \uD83D\uDE4F`;
       }
 
       const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
