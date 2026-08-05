@@ -44,6 +44,7 @@
   <style>
     html {
       scroll-behavior: smooth;
+      background-color: #1a1d1a;
     }
 
     body {
@@ -558,7 +559,7 @@
   </section>
 
   <!-- ============ MAIN CONTENT ============ -->
-  <main id="mainContent" class="relative">
+  <main id="mainContent" class="relative overflow-x-hidden w-full">
 
     <!-- ===== BERANDA ===== -->
     <section id="beranda"
@@ -1200,8 +1201,8 @@
     canvas.style.position = 'fixed';
     canvas.style.top = '0';
     canvas.style.left = '0';
-    canvas.style.width = '100vw';
-    canvas.style.height = '100vh';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '0';
     document.body.prepend(canvas);
