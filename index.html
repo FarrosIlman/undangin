@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Nabilah & Rizal | Undangan Pernikahan</title>
+  <link rel="icon" type="image/jpeg" href="assets/favicon/icon.jpg">
+  <link rel="apple-touch-icon" href="assets/favicon/icon.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,32 +53,56 @@
     }
 
     /* ---------- Floral SVG Background Patterns (Local Files) ---------- */
-    .bg-pattern-1, .bg-pattern-2, .bg-pattern-3, .bg-pattern-4, .bg-pattern-5 {
+    .bg-pattern-1,
+    .bg-pattern-2,
+    .bg-pattern-3,
+    .bg-pattern-4,
+    .bg-pattern-5 {
       position: relative;
     }
-    .bg-pattern-1::before, .bg-pattern-2::before, .bg-pattern-3::before, .bg-pattern-4::before, .bg-pattern-5::before {
+
+    .bg-pattern-1::before,
+    .bg-pattern-2::before,
+    .bg-pattern-3::before,
+    .bg-pattern-4::before,
+    .bg-pattern-5::before {
       content: "";
       position: absolute;
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      
+
       /* GPU Hardware Acceleration to prevent scroll lag from filters */
       will-change: transform, opacity;
       transform: translateZ(0);
-      
+
       /* Magic trick: Invert hitam jadi putih, putih jadi hitam, lalu blend-mode screen */
       filter: invert(1) sepia(1) hue-rotate(5deg) saturate(2) opacity(0.25);
       mix-blend-mode: screen;
-      
+
       background-size: 350px;
       background-repeat: repeat;
     }
-    .bg-pattern-1::before { background-image: url('pattern1.svg'); }
-    .bg-pattern-2::before { background-image: url('pattern2.svg'); }
-    .bg-pattern-3::before { background-image: url('pattern3.svg'); }
-    .bg-pattern-4::before { background-image: url('pattern4.svg'); }
-    .bg-pattern-5::before { background-image: url('pattern5.svg'); }
+
+    .bg-pattern-1::before {
+      background-image: url('assets/images/pattern1.svg');
+    }
+
+    .bg-pattern-2::before {
+      background-image: url('assets/images/pattern2.svg');
+    }
+
+    .bg-pattern-3::before {
+      background-image: url('assets/images/pattern3.svg');
+    }
+
+    .bg-pattern-4::before {
+      background-image: url('assets/images/pattern4.svg');
+    }
+
+    .bg-pattern-5::before {
+      background-image: url('assets/images/pattern5.svg');
+    }
 
     /* ---------- Grain / cinematic texture overlay ---------- */
     body::after {
@@ -460,8 +486,8 @@
   <audio id="bgAudio" loop preload="none">
     <!-- Musik: Tulus - Teman Hidup (Sumber: Archive.org) -->
     <!-- Jika musik tidak otomatis berputar/link mati, Anda dapat mengunduh mp3 Tulus, letakkan di folder yang sama, lalu ganti src menjadi "namafile.mp3" -->
-    <source src="Tiara Andini.mp3" type="audio/mpeg">
-    <source src="Tiara Andini.mp3" type="audio/mpeg">
+    <source src="assets/audio/Tiara Andini.mp3" type="audio/mpeg">
+    <source src="assets/audio/Tiara Andini.mp3" type="audio/mpeg">
   </audio>
   <!-- ============ FLOATING CONTROLS ============ -->
   <div class="fixed bottom-24 md:bottom-8 right-5 z-40 flex flex-col gap-3">
@@ -482,7 +508,7 @@
   <section id="cover"
     class="fixed inset-0 z-50 flex flex-col items-center justify-between overflow-hidden px-6 py-10 text-center">
     <div class="kb-frame kb-slow absolute inset-0">
-      <img loading="lazy" src="DSC00474.jpeg" class="object-cover w-full h-full" alt="Cover Image">
+      <img loading="lazy" src="assets/images/DSC00474.jpeg" class="object-cover w-full h-full" alt="Cover Image">
     </div>
     <div class="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/45 to-charcoal/85"></div>
     <div class="absolute inset-0" style="box-shadow: inset 0 0 180px 60px rgba(0,0,0,.55);"></div>
@@ -496,20 +522,22 @@
 
     <div class="relative z-10">
       <p class="font-script italic text-2xl md:text-3xl text-goldlight mb-2 drift glow-text">The Wedding of</p>
-      <h1 class="font-serif text-5xl md:text-7xl leading-tight drop-shadow-2xl glow-text flex flex-col items-center gap-1 md:gap-3">
+      <h1
+        class="font-serif text-5xl md:text-7xl leading-tight drop-shadow-2xl glow-text flex flex-col items-center gap-1 md:gap-3">
         <div>
           <span class="letter gold-foil" style="animation-delay:.1s">N</span><span class="letter gold-foil"
-            style="animation-delay:.15s">a</span><span class="letter gold-foil" style="animation-delay:.2s">b</span><span
-            class="letter gold-foil" style="animation-delay:.25s">i</span><span class="letter gold-foil"
-            style="animation-delay:.3s">l</span><span class="letter gold-foil" style="animation-delay:.35s">a</span><span
-            class="letter gold-foil" style="animation-delay:.4s">h</span>
+            style="animation-delay:.15s">a</span><span class="letter gold-foil"
+            style="animation-delay:.2s">b</span><span class="letter gold-foil"
+            style="animation-delay:.25s">i</span><span class="letter gold-foil"
+            style="animation-delay:.3s">l</span><span class="letter gold-foil"
+            style="animation-delay:.35s">a</span><span class="letter gold-foil" style="animation-delay:.4s">h</span>
         </div>
         <div class="letter text-white/90 text-4xl md:text-5xl" style="animation-delay:.45s">&amp;</div>
         <div>
           <span class="letter gold-foil" style="animation-delay:.55s">R</span><span class="letter gold-foil"
-            style="animation-delay:.6s">i</span><span class="letter gold-foil" style="animation-delay:.65s">z</span><span
-            class="letter gold-foil" style="animation-delay:.7s">a</span><span class="letter gold-foil"
-            style="animation-delay:.75s">l</span>
+            style="animation-delay:.6s">i</span><span class="letter gold-foil"
+            style="animation-delay:.65s">z</span><span class="letter gold-foil"
+            style="animation-delay:.7s">a</span><span class="letter gold-foil" style="animation-delay:.75s">l</span>
         </div>
       </h1>
       <div class="flex items-center justify-center gap-3 mt-6 text-white/60">
@@ -535,8 +563,7 @@
     <!-- ===== BERANDA ===== -->
     <section id="beranda"
       class="parallax-wrap relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24">
-      <div class="parallax-layer" data-speed="0.35"
-        style="background-image:url('DSC00478.jpeg')"></div>
+      <div class="parallax-layer" data-speed="0.35" style="background-image:url('assets/images/DSC00478.jpeg')"></div>
       <div class="absolute inset-0 bg-cream/88"></div>
 
       <div class="relative z-10">
@@ -544,26 +571,23 @@
         <h2 class="reveal font-serif text-4xl md:text-6xl text-ink mb-3 glow-text">Nabilah <span
             class="gold-foil">&amp;</span>
           Rizal</h2>
-        <p class="reveal text-white/90 tracking-widest text-sm md:text-base font-medium mb-10">SABTU, 29 AGUSTUS 2026</p>
+        <p class="reveal text-white/90 tracking-widest text-sm md:text-base font-medium mb-10">SABTU, 29 AGUSTUS 2026
+        </p>
 
         <div class="reveal grid grid-cols-4 gap-3 md:gap-6">
-          <div
-            class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
+          <div class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
             <div id="cd-days" class="font-serif text-2xl md:text-4xl gold-foil">00</div>
             <div class="text-[10px] md:text-xs tracking-widest text-ink/70 mt-1">HARI</div>
           </div>
-          <div
-            class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
+          <div class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
             <div id="cd-hours" class="font-serif text-2xl md:text-4xl gold-foil">00</div>
             <div class="text-[10px] md:text-xs tracking-widest text-ink/70 mt-1">JAM</div>
           </div>
-          <div
-            class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
+          <div class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
             <div id="cd-mins" class="font-serif text-2xl md:text-4xl gold-foil">00</div>
             <div class="text-[10px] md:text-xs tracking-widest text-ink/70 mt-1">MENIT</div>
           </div>
-          <div
-            class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
+          <div class="glass-card gilded-border rounded-xl px-3 py-4 md:px-6 md:py-5 shadow-lg shadow-black/20">
             <div id="cd-secs" class="font-serif text-2xl md:text-4xl gold-foil">00</div>
             <div class="text-[10px] md:text-xs tracking-widest text-ink/70 mt-1">DETIK</div>
           </div>
@@ -586,7 +610,8 @@
           <circle cx="70" cy="15" r="2" fill="currentColor" />
         </svg>
         <p class="reveal font-serif italic text-lg md:text-xl leading-relaxed text-ink/80">
-          "Wahai manusia, bertakwalah kepada Tuhanmu yang telah menciptakan kamu dari diri yang satu, dan Dia menciptakan
+          "Wahai manusia, bertakwalah kepada Tuhanmu yang telah menciptakan kamu dari diri yang satu, dan Dia
+          menciptakan
           pasangannya dari diri yang satu itu; dan dari keduanya Dia memperkembangbiakkan laki-laki dan perempuan yang
           banyak."
         </p>
@@ -611,7 +636,8 @@
         <div class="reveal-left flex flex-col items-center text-center">
           <div
             class="tilt-card kb-frame frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card">
-            <img loading="lazy" src="DSC00489.jpeg" class="object-cover w-full h-full" alt="Nabilah Jauza Rizqi">
+            <img loading="lazy" src="assets/images/DSC00489.jpeg" class="object-cover w-full h-full"
+              alt="Nabilah Jauza Rizqi">
           </div>
           <p class="font-script italic text-2xl text-gold mb-1">The Bride</p>
           <h3 class="font-serif text-2xl md:text-3xl text-ink mb-3">Nabilah Jauza Rizqi, S.Farm.</h3>
@@ -623,7 +649,8 @@
         <div class="reveal-right flex flex-col items-center text-center">
           <div
             class="tilt-card kb-frame kb-alt frame-arch w-56 h-64 md:w-60 md:h-72 mb-6 border-4 border-white shadow-2xl shadow-black/20 gilded-border glass-card">
-            <img loading="lazy" src="DSC00506.jpeg" class="object-cover w-full h-full" alt="Irfan Akhmad Rizal">
+            <img loading="lazy" src="assets/images/DSC00506.jpeg" class="object-cover w-full h-full"
+              alt="Irfan Akhmad Rizal">
           </div>
           <p class="font-script italic text-2xl text-gold mb-1">The Groom</p>
           <h3 class="font-serif text-2xl md:text-3xl text-ink mb-3">Irfan Akhmad Rizal, S.Pd</h3>
@@ -635,8 +662,7 @@
 
     <!-- ===== ACARA ===== -->
     <section id="acara" class="parallax-wrap relative px-6 py-20 md:py-28">
-      <div class="parallax-layer" data-speed="0.28"
-        style="background-image:url('DSC00547.jpeg')"></div>
+      <div class="parallax-layer" data-speed="0.28" style="background-image:url('assets/images/DSC00547.jpeg')"></div>
       <div class="absolute inset-0 bg-charcoal/88"></div>
 
       <div class="relative z-10 text-center mb-14">
@@ -680,54 +706,64 @@
       </div>
       <!-- Asymmetrical / Scattered Aesthetic Gallery (Fixed Mobile Overlap) -->
       <div class="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-4 md:gap-10 mt-12 px-2 pb-10">
-        <div class="reveal relative w-[42%] md:w-52 -rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-4">
+        <div
+          class="reveal relative w-[42%] md:w-52 -rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-4">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00474.jpeg" class="w-full h-auto rounded" alt="Galeri 1">
+            <img loading="lazy" src="assets/images/DSC00474.jpeg" class="w-full h-auto rounded" alt="Galeri 1">
           </div>
         </div>
-        <div class="reveal relative w-[48%] md:w-60 rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-12">
+        <div
+          class="reveal relative w-[48%] md:w-60 rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-12">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00478.jpeg" class="w-full h-auto rounded" alt="Galeri 2">
+            <img loading="lazy" src="assets/images/DSC00478.jpeg" class="w-full h-auto rounded" alt="Galeri 2">
           </div>
         </div>
-        <div class="reveal relative w-[42%] md:w-52 -rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-8">
+        <div
+          class="reveal relative w-[42%] md:w-52 -rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-8">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00489.jpeg" class="w-full h-auto rounded" alt="Galeri 3">
+            <img loading="lazy" src="assets/images/DSC00489.jpeg" class="w-full h-auto rounded" alt="Galeri 3">
           </div>
         </div>
-        <div class="reveal relative w-[48%] md:w-64 rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-16">
+        <div
+          class="reveal relative w-[48%] md:w-64 rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-16">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00506.jpeg" class="w-full h-auto rounded" alt="Galeri 4">
+            <img loading="lazy" src="assets/images/DSC00506.jpeg" class="w-full h-auto rounded" alt="Galeri 4">
           </div>
         </div>
-        <div class="reveal relative w-[40%] md:w-48 -rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-6">
+        <div
+          class="reveal relative w-[40%] md:w-48 -rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-6">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00547.jpeg" class="w-full h-auto rounded" alt="Galeri 5">
+            <img loading="lazy" src="assets/images/DSC00547.jpeg" class="w-full h-auto rounded" alt="Galeri 5">
           </div>
         </div>
-        <div class="reveal relative w-[45%] md:w-56 rotate-1 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-10">
+        <div
+          class="reveal relative w-[45%] md:w-56 rotate-1 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-10">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00571.jpeg" class="w-full h-auto rounded" alt="Galeri 6">
+            <img loading="lazy" src="assets/images/DSC00571.jpeg" class="w-full h-auto rounded" alt="Galeri 6">
           </div>
         </div>
-        <div class="reveal relative w-[42%] md:w-52 -rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-8">
+        <div
+          class="reveal relative w-[42%] md:w-52 -rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-8">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00588.jpeg" class="w-full h-auto rounded" alt="Galeri 7">
+            <img loading="lazy" src="assets/images/DSC00588.jpeg" class="w-full h-auto rounded" alt="Galeri 7">
           </div>
         </div>
-        <div class="reveal relative w-[48%] md:w-60 rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-14">
+        <div
+          class="reveal relative w-[48%] md:w-60 rotate-2 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-14">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00592.jpeg" class="w-full h-auto rounded" alt="Galeri 8">
+            <img loading="lazy" src="assets/images/DSC00592.jpeg" class="w-full h-auto rounded" alt="Galeri 8">
           </div>
         </div>
-        <div class="reveal relative w-[42%] md:w-52 -rotate-1 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-6">
+        <div
+          class="reveal relative w-[42%] md:w-52 -rotate-1 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer mt-6">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00597.jpeg" class="w-full h-auto rounded" alt="Galeri 9">
+            <img loading="lazy" src="assets/images/DSC00597.jpeg" class="w-full h-auto rounded" alt="Galeri 9">
           </div>
         </div>
-        <div class="reveal relative w-[48%] md:w-56 rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-12">
+        <div
+          class="reveal relative w-[48%] md:w-56 rotate-3 hover:rotate-0 hover:scale-110 hover:z-20 transition-all duration-500 ease-out cursor-pointer md:mt-12">
           <div class="glass-card gilded-border p-2 shadow-xl">
-            <img loading="lazy" src="DSC00603.jpeg" class="w-full h-auto rounded" alt="Galeri 10">
+            <img loading="lazy" src="assets/images/DSC00603.jpeg" class="w-full h-auto rounded" alt="Galeri 10">
           </div>
         </div>
       </div>
@@ -759,6 +795,55 @@
       </div>
     </section>
 
+    <!-- ===== RSVP ===== -->
+    <section id="rsvp" class="relative px-6 py-20 md:py-28 bg-pattern-4">
+      <div class="text-center mb-14">
+        <p class="reveal text-xs tracking-[0.42em] text-gold section-label">RESERVATION</p>
+        <h2 class="reveal font-serif text-3xl md:text-5xl text-ink mt-3">Konfirmasi Kehadiran</h2>
+        <div class="reveal divider-line w-16 mx-auto mt-5"></div>
+      </div>
+      <div class="reveal max-w-lg mx-auto glass-card gilded-border rounded-2xl shadow-xl p-8 md:p-10">
+        <p class="text-sm md:text-base text-ink/70 text-center mb-8">
+          Tanpa mengurangi rasa hormat, mohon bantuannya untuk mengonfirmasi kehadiran Anda pada form WhatsApp berikut:
+        </p>
+        <form id="rsvpForm" class="space-y-6 text-left">
+          <div>
+            <label class="block text-xs tracking-widest text-gold font-bold mb-2">NAMA LENGKAP</label>
+            <input type="text" id="rsvpName" required placeholder="Tulis nama Anda..."
+              class="w-full bg-transparent border-b border-gold/30 py-2 text-ink focus:outline-none focus:border-gold transition-colors placeholder:text-ink/30">
+          </div>
+          <div class="relative custom-select">
+            <label class="block text-xs tracking-widest text-gold font-bold mb-2">JUMLAH TAMU</label>
+            <div class="select-selected w-full bg-transparent border-b border-gold/30 py-2 text-ink flex justify-between items-center cursor-pointer hover:border-gold transition-colors">
+              <span class="selected-text text-ink">1 Orang</span>
+              <i class="fa-solid fa-chevron-down text-gold text-xs transition-transform duration-300"></i>
+            </div>
+            <div class="select-items absolute left-0 right-0 top-full mt-2 bg-[#1a1d1a] border border-gold/30 rounded-lg shadow-xl overflow-hidden z-50 opacity-0 invisible transform -translate-y-2 transition-all duration-300">
+              <div data-value="1" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">1 Orang</div>
+              <div data-value="2" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">2 Orang</div>
+            </div>
+            <input type="hidden" id="rsvpCount" value="1" required>
+          </div>
+          <div class="relative custom-select">
+            <label class="block text-xs tracking-widest text-gold font-bold mb-2">KONFIRMASI KEHADIRAN</label>
+            <div class="select-selected w-full bg-transparent border-b border-gold/30 py-2 text-ink flex justify-between items-center cursor-pointer hover:border-gold transition-colors">
+              <span class="selected-text text-ink">Insya Allah Hadir</span>
+              <i class="fa-solid fa-chevron-down text-gold text-xs transition-transform duration-300"></i>
+            </div>
+            <div class="select-items absolute left-0 right-0 top-full mt-2 bg-[#1a1d1a] border border-gold/30 rounded-lg shadow-xl overflow-hidden z-50 opacity-0 invisible transform -translate-y-2 transition-all duration-300">
+              <div data-value="Hadir" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">Insya Allah Hadir</div>
+              <div data-value="Tidak Hadir" class="px-4 py-3 text-goldlight hover:bg-gold/20 cursor-pointer transition-colors border-b border-gold/10 last:border-0">Maaf, Tidak Bisa Hadir</div>
+            </div>
+            <input type="hidden" id="rsvpStatus" value="Hadir" required>
+          </div>
+          <button type="submit"
+            class="w-full mt-4 btn-shine py-3.5 rounded-full bg-gradient-to-r from-[#8A6A34] via-gold to-[#8A6A34] bg-[length:200%_auto] text-white text-sm tracking-widest font-bold shadow-xl shadow-black/40 hover:shadow-2xl transition-all border border-goldlight/40 flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> KIRIM KONFIRMASI
+          </button>
+        </form>
+      </div>
+    </section>
+
     <!-- ===== HADIAH ===== -->
     <section id="hadiah" class="relative px-6 py-20 md:py-28 bg-pattern-5">
       <div class="text-center mb-14">
@@ -776,7 +861,8 @@
         <div
           class="reveal-left gilded-border glass-card rounded-2xl shadow-xl p-6 flex items-center justify-between gap-4">
           <div>
-            <img src="Bank_Negara_Indonesia_logo_(2004).svg" alt="BNI Logo" class="h-8 md:h-10 object-contain mb-3 brightness-0 invert opacity-90">
+            <img src="assets/images/Bank_Negara_Indonesia_logo_(2004).svg" alt="BNI Logo"
+              class="h-8 md:h-10 object-contain mb-3 brightness-0 invert opacity-90">
             <p class="font-serif text-lg text-ink">IRFAN AKHMAD RIZAL</p>
             <p class="text-sm text-ink/60 tracking-wider">1974616537</p>
           </div>
@@ -788,7 +874,8 @@
         <div
           class="reveal-right gilded-border glass-card rounded-2xl shadow-xl p-6 flex items-center justify-between gap-4">
           <div>
-            <img src="Bank_Negara_Indonesia_logo_(2004).svg" alt="BNI Logo" class="h-8 md:h-10 object-contain mb-3 brightness-0 invert opacity-90">
+            <img src="assets/images/Bank_Negara_Indonesia_logo_(2004).svg" alt="BNI Logo"
+              class="h-8 md:h-10 object-contain mb-3 brightness-0 invert opacity-90">
             <p class="font-serif text-lg text-ink">NABILAH JAUZA RIZQI</p>
             <p class="text-sm text-ink/60 tracking-wider">1974512935</p>
           </div>
@@ -802,8 +889,7 @@
 
     <!-- ===== PENUTUP ===== -->
     <section class="parallax-wrap relative px-6 py-24 md:py-32 text-center overflow-hidden">
-      <div class="parallax-layer" data-speed="0.3"
-        style="background-image:url('DSC00474.jpeg')"></div>
+      <div class="parallax-layer" data-speed="0.3" style="background-image:url('assets/images/DSC00474.jpeg')"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-cream/95 via-cream/92 to-cream"></div>
 
       <svg class="reveal float-slow relative z-10 w-16 h-16 mx-auto mb-8 text-rose" viewBox="0 0 100 100" fill="none"
@@ -821,9 +907,11 @@
       <div class="reveal relative z-10 divider-line w-16 mx-auto mb-8"></div>
       <p class="reveal relative z-10 text-sm text-ink/60 mb-2">Hormat Kami Yang Mengundang,</p>
       <h3 class="reveal relative z-10 font-script italic text-4xl md:text-5xl gold-foil">Nabilah &amp; Rizal</h3>
-      <p class="relative z-10 mt-16 text-xs text-ink/40 tracking-widest">MADE WITH <i class="fa-solid fa-heart text-rose"></i> — 2026</p>
+      <p class="relative z-10 mt-16 text-xs text-ink/40 tracking-widest">MADE WITH <i
+          class="fa-solid fa-heart text-rose"></i> â€” 2026</p>
       <p class="relative z-10 mt-2 text-[10px] text-ink/40 tracking-widest uppercase">
-        Design by <a href="https://instagram.com/malika.joki" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-goldlight transition-colors">@malika.joki</a>
+        Design by <a href="https://instagram.com/malika.joki" target="_blank" rel="noopener noreferrer"
+          class="text-gold hover:text-goldlight transition-colors">@malika.joki</a>
       </p>
     </section>
 
@@ -870,7 +958,12 @@
       (function setGuestName() {
         const params = new URLSearchParams(window.location.search);
         const to = params.get('to');
-        if (to) document.getElementById('guestName').textContent = decodeURIComponent(to.replace(/\+/g, ' '));
+        if (to) {
+          const guestName = decodeURIComponent(to.replace(/\+/g, ' '));
+          document.getElementById('guestName').textContent = guestName;
+          const rsvpInput = document.getElementById('rsvpName');
+          if (rsvpInput) rsvpInput.value = guestName;
+        }
       })();
 
     const cover = document.getElementById('cover');
@@ -994,6 +1087,75 @@
       document.querySelector(link.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
     }));
 
+    // RSVP Logic
+    document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('rsvpName').value;
+      const count = document.getElementById('rsvpCount').value;
+      const status = document.getElementById('rsvpStatus').value;
+      const phone = "6281903411015"; // Ganti nomor ini
+
+      let message = `Assalamu'alaikum, Halo Nabilah & Rizal,\nSelamat ya atas pernikahannya! 🥳\n\nSaya *${name}* `;
+      if (status === 'Hadir') {
+        message += `insya Allah akan *HADIR* bersama *${count}* orang.\n\nSemoga persiapannya dilancarkan sampai hari H yaa! 🙏`;
+      } else {
+        message += `mohon maaf sekali *BELUM BISA HADIR* di hari bahagia kalian.\n\nSemoga acaranya berjalan lancar dan sukses. Selamat berbahagia! 🙏`;
+      }
+
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+
+    // Custom Select Logic
+    document.querySelectorAll('.custom-select').forEach(wrapper => {
+      const selected = wrapper.querySelector('.select-selected');
+      const items = wrapper.querySelector('.select-items');
+      const text = wrapper.querySelector('.selected-text');
+      const input = wrapper.querySelector('input[type="hidden"]');
+      const icon = wrapper.querySelector('.fa-chevron-down');
+
+      selected.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Close others
+        document.querySelectorAll('.select-items').forEach(el => {
+          if (el !== items) {
+            el.classList.add('opacity-0', 'invisible', '-translate-y-2');
+            el.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            const otherIcon = el.previousElementSibling.querySelector('.fa-chevron-down');
+            if(otherIcon) otherIcon.classList.remove('rotate-180');
+          }
+        });
+        
+        items.classList.toggle('opacity-0');
+        items.classList.toggle('invisible');
+        items.classList.toggle('-translate-y-2');
+        items.classList.toggle('opacity-100');
+        items.classList.toggle('visible');
+        items.classList.toggle('translate-y-0');
+        icon.classList.toggle('rotate-180');
+      });
+
+      items.querySelectorAll('div').forEach(item => {
+        item.addEventListener('click', () => {
+          text.textContent = item.textContent;
+          input.value = item.getAttribute('data-value');
+          
+          items.classList.add('opacity-0', 'invisible', '-translate-y-2');
+          items.classList.remove('opacity-100', 'visible', 'translate-y-0');
+          icon.classList.remove('rotate-180');
+        });
+      });
+    });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.select-items').forEach(items => {
+        items.classList.add('opacity-0', 'invisible', '-translate-y-2');
+        items.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        const icon = items.previousElementSibling.querySelector('.fa-chevron-down');
+        if(icon) icon.classList.remove('rotate-180');
+      });
+    });
+
     /* ---------- Reveal DUA ARAH: replay setiap kali elemen masuk/keluar viewport ---------- */
     const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     const io = new IntersectionObserver((entries) => {
@@ -1028,7 +1190,7 @@
         ticking = true;
       }
     }, { passive: true });
-    
+
     // Initial call to set active nav
     setActiveNav();
 
