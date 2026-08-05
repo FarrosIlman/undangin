@@ -974,16 +974,28 @@
       (function setGuestName() {
         const params = new URLSearchParams(window.location.search);
         const to = params.get('to');
-        if (to) {
-          let guestName = "Tamu Undangan";
-          try {
-            guestName = decodeURIComponent(escape(atob(to)));
-          } catch (e) {
-            console.warn("Invalid guest token");
-          }
+        
+        const showError = (title, message) => {
+          document.body.innerHTML = `
+            <div style="height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1a1d1a;color:#F7F1E6;font-family:sans-serif;text-align:center;padding:20px;">
+              <h1 style="color:#d4af37;margin-bottom:10px;">${title}</h1>
+              <p style="opacity:0.8;">${message}</p>
+            </div>
+          `;
+        };
+
+        if (!to) {
+          showError("Akses Ditolak", "Maaf, Anda memerlukan link undangan resmi untuk mengakses halaman ini.");
+          return;
+        }
+
+        try {
+          const guestName = decodeURIComponent(escape(atob(to)));
           document.getElementById('guestName').textContent = guestName;
           const rsvpInput = document.getElementById('rsvpName');
           if (rsvpInput) rsvpInput.value = guestName;
+        } catch (e) {
+          showError("Link Tidak Valid", "Maaf, link undangan Anda tidak valid atau telah dimodifikasi.");
         }
       })();
 
