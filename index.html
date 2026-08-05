@@ -985,28 +985,29 @@
           `;
         };
 
-        if (!to || !sig) {
-          showError("Akses Ditolak", "Maaf, Anda memerlukan link undangan resmi untuk mengakses halaman ini.");
-          return;
+        let finalName = "Tamu Undangan";
+
+        if (to) {
+          const guestNameRaw = decodeURIComponent(to.replace(/\+/g, ' '));
+          const secretKey = "KunciRahasiaUndangan2026";
+          let expectedSig = "";
+          
+          try {
+            expectedSig = btoa(unescape(encodeURIComponent(guestNameRaw + secretKey)));
+          } catch (e) {}
+
+          // Verifikasi keaslian nama menggunakan Signature
+          if (sig !== expectedSig) {
+            showError("Link Tidak Valid", "Maaf, link undangan Anda telah dimodifikasi secara ilegal.");
+            return;
+          }
+          
+          finalName = guestNameRaw;
         }
 
-        const guestNameRaw = decodeURIComponent(to.replace(/\+/g, ' '));
-        const secretKey = "KunciRahasiaUndangan2026";
-        let expectedSig = "";
-        
-        try {
-          expectedSig = btoa(unescape(encodeURIComponent(guestNameRaw + secretKey)));
-        } catch (e) {}
-
-        // Verifikasi keaslian nama menggunakan Signature
-        if (sig !== expectedSig) {
-          showError("Link Tidak Valid", "Maaf, link undangan Anda telah dimodifikasi secara ilegal.");
-          return;
-        }
-
-        document.getElementById('guestName').textContent = guestNameRaw;
+        document.getElementById('guestName').textContent = finalName;
         const rsvpInput = document.getElementById('rsvpName');
-        if (rsvpInput) rsvpInput.value = guestNameRaw;
+        if (rsvpInput) rsvpInput.value = finalName;
       })();
 
     const cover = document.getElementById('cover');
